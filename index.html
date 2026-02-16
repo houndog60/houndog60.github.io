@@ -15,6 +15,7 @@
 --card:#111a2e;
 --border:rgba(255,255,255,.12);
 }
+
 body{
 margin:0;
 font-family:system-ui,Segoe UI,Arial;
@@ -24,102 +25,38 @@ radial-gradient(900px 500px at 10% 0%, rgba(110,168,255,.25), transparent 60%),
 radial-gradient(800px 500px at 90% 10%, rgba(124,240,214,.20), transparent 60%),
 #070b14;
 }
+
 .wrap{max-width:1100px;margin:auto;padding:24px}
-header{display:flex;justify-content:space-between;align-items:center}
+
+header{
+display:flex;
+align-items:center;
+gap:14px;
+margin-bottom:40px;
+}
+
+/* LOGO */
 .logo{
-width:48px;height:48px;border-radius:16px;
-background:linear-gradient(135deg,var(--brand1),var(--brand2));
-}
-.brand{display:flex;gap:12px;align-items:center}
-.brandname{font-size:30px;font-weight:900}
-.hero{padding:60px 0}
-h1{font-size:48px;margin-bottom:10px}
-p{color:var(--muted);max-width:620px}
-.btn{
-display:inline-block;
-margin-top:14px;
-padding:14px 18px;
-border-radius:14px;
-font-weight:800;
-background:linear-gradient(135deg,var(--brand1),var(--brand2));
-color:#06101f;
-text-decoration:none;
-}
-.card{
-margin-top:40px;
-background:var(--card);
-padding:20px;
+width:60px;
+height:60px;
 border-radius:18px;
-border:1px solid var(--border);
+background:linear-gradient(135deg,var(--brand1),var(--brand2));
+display:flex;
+align-items:center;
+justify-content:center;
+font-weight:900;
+font-size:22px;
+color:#07101f;
+box-shadow:0 10px 30px rgba(0,0,0,.35);
 }
-</style>
-</head>
 
-<body>
-<div class="wrap">
+.brandname{
+font-size:32px;
+font-weight:900;
+letter-spacing:.3px;
+}
 
-<header>
-<div class="brand">
-<div class="logo"></div>
-<div class="brandname">Tupelo Solutions LLC</div>
-</div>
-</header>
-
-<section class="hero">
-<h1>Reliable support for everyday supply needs.</h1>
-<p>
-We provide dependable sourcing and fulfillment of routine over-the-counter
-and facility essentials — the consistent items organizations rely on.
-</p>
-
-<a class="btn"
-href="mailto:info@tupelo-solutions.com?subject=Inquiry">
-Contact Us
-</a>
-</section>
-<!-- About / Highlights -->
-<div class="card">
-  <h2 style="margin:0 0 10px;">What you can expect</h2>
-  <ul style="margin:0; padding-left:18px; color:var(--muted); line-height:1.8;">
-    <li>Clear communication and fast response times</li>
-    <li>Organized workflow from request to delivery</li>
-    <li>Accuracy-first approach and consistent follow-through</li>
-  </ul>
-</div>
-
-<!-- Contact section -->
-<div class="card" style="margin-top:16px;">
-  <h2 style="margin:0 0 10px;">Contact</h2>
-  <p style="margin:0 0 14px; color:var(--muted);">
-    Email or call — we’ll reply quickly with next steps.
-  </p>
-
-  <div style="display:flex; gap:12px; flex-wrap:wrap;">
-    <a class="btn"
-       href="mailto:info@tupelo-solutions.com?subject=Tupelo%20Solutions%20Inquiry&body=Hello%20Tupelo%20Solutions%2C%0A%0AI%20would%20like%20to%20inquire%20about%20routine%20supply%20support.%0A%0AOrganization%3A%0AContact%20Name%3A%0APhone%3A%0A%0AThank%20you.">
-      Contact Us
-    </a>
-
-    <a class="btn"
-       style="background:rgba(255,255,255,.06); color:var(--text); border:1px solid var(--border);"
-       href="tel:3057311315">
-      Call (305) 731-1315
-    </a>
-  </div>
-
-  <p style="margin:14px 0 0; color:var(--muted);">
-    Aventura, Florida
-  </p>
-</div>
-
-<footer style="margin-top:40px; padding:24px 0; color:rgba(234,240,255,.62); border-top:1px solid rgba(255,255,255,.10); font-size:13px;">
-  © <span id="y"></span> Tupelo Solutions LLC • Aventura, Florida • (305) 731-1315 •
-  <a href="mailto:info@tupelo-solutions.com" style="color:inherit;">info@tupelo-solutions.com</a>
-</footer>
-
-</div> <!-- end wrap -->
-<script>
-  document.getElementById("y").textContent = new Date().getFullYear();
-</script>
-</body>
-</html>
+.sub{
+color:var(--muted);
+font-size:13px;
+}
